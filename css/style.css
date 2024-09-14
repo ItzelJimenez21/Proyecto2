@@ -1,0 +1,96 @@
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+div{
+    --background-color:rgb(57, 146, 183); 
+    height: 40px; 
+}
+
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: monospace;
+}
+style>
+/* Estilo para las pestañas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.tabs button.active {
+    background-color: #ddd;
+    border-bottom: none; /* Evita que se vea el borde inferior en la pestaña activa */
+}
+
+/* Contenedores para el contenido de las pestañas */
+.tab-content {
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    color: pink;
+}
+
+.tab-content p {
+    color: #1931cd;
+}
+style>
+
+
+div{
+    background-color:rgb(151, 16, 16); 
+    height: 40px; 
+}
+#cuerpo{
+    background-color:rgb(163, 225, 224); 
+    height: 850px;
+}
+.piePagina{
+    background-color:rgb(207, 24, 158); 
+    height: 50px;
+}
+div ul{
+    list-style: none;
+}
+div ul li{
+    display: inline-block;
+    color: rgb(16, 16, 8);
+    padding-left: 40px;
+}
+#MostrarSlider{
+    background-image: url("../img/slider2.png");
+   background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:40vh;
+    padding: 50px;
+}

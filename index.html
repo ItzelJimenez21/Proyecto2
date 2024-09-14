@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .section { display: none; }
+        .active { display: block; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body font-family: 'Courier New', Courier, monospace;>
+    <div style="background-color:yellow; height: 40px;">
+        <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showSection('dns')">¿QUÉ ES EL DNS?</a></li>
+            <li><a href="#" onclick="showSection('propositos')">PROPÓSITOS DEL DNS</a></li>
+            <li><a href="#" onclick="showSection('funcionamiento')">CÓMO FUNCIONA EL DNS</a></li>
+            <li><a href="#" onclick="showSection('registro')">¿QUÉ ES UN REGISTRO DNS?</a></li>
+            <li><a href="#" onclick="showSection('tipos')">TIPOS MÁS COMUNES DE REGISTROS DNS</a></li>
+            <li><a href="#" onclick="showSection('servidores')">SERVIDORES DNS IMPLICADOS</a></li>
+            <li><a href="#" onclick="showSection('ataques')">ATAQUES DNS MÁS COMUNES</a></li>
+        </ul>
+    </nav>
+    </div>
+    
+    <div id="MostrarSlider">
+        <h1 style="color: black">DNS</h1>
+    </div>
+    <div id="cuerpo">
+        <!-- Secciones -->
+        <div id="dns" class="section active">
+            <h2>¿QUÉ ES EL DNS?</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>Todos los dispositivos conectados a Internet, desde teléfonos inteligentes y
+                            portátiles hasta servidores que alojan sitios web de comercio electrónico, se buscan
+                            y comunican entre sí utilizando números conocidos como direcciones IP. Sin
+                            embargo, en lugar de recordar e ingresar un número largo, puedes simplemente
+                            escribir un nombre de dominio, como ejemplo.com, en tu navegador web. El DNS
+                            (Sistema de Nombres de Dominio) es el sistema que traduce esos nombres de
+                            dominio en direcciones IP, permitiéndote acceder al sitio web correcto de manera
+                            fácil y rápida.</p>
+                        <img src="img/DNS1.png" alt="DNS" style="width: 30%;">
+                    </td>
+                    <td>
+                       
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="propositos" class="section">
+            <h2>PROPÓSITOS DEL DNS</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>El propósito de los servidores DNS es hacer que este proceso no suponga
+                            problemas para los usuarios, al tiempo que brinda capacidad para un gran volumen
+                            de tráfico, cambiando nombres de dominio y direcciones IP. El proceso de
+                            resolución de DNS depende de variables, tales como el equilibrio de carga, la
+                            ubicación del servidor y del usuario y la intensidad de la conexión a Internet.</p>
+                            <img src="img/DNS2.png" alt="DNS" style="width: 30%;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="funcionamiento" class="section">
+            <h2>CÓMO FUNCIONA EL DNS</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>El proceso de solución de DNS supone convertir un nombre de servidor (como
+                            www.example.com) en una dirección IP compatible con el ordenador (como
+                            192.168.1.1). Se da una dirección IP a cada dispositivo en Internet, y esa dirección
+                            será necesaria para encontrar el dispositivo apropiado de Internet, al igual que se
+                            usa la dirección de una calle para encontrar una casa concreta. Cuando un usuario
+                            quiere cargar una página, se debe traducir lo que el usuario escribe en su navegador
+                            web (example.com) a una dirección que el ordenador pueda entender para poder
+                            localizar la página web de example.com.
+                            </p>
+                            <img src="img/DNS3.png" alt="DNS" style="width: 30%;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="registro" class="section">
+            <h2>¿QUÉ ES UN REGISTRO DNS?</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>Los registros DNS (también conocidos como archivos de zona) son instrucciones
+                            radicadas en servidores DNS autoritativos que proporcionan información sobre un
+                            dominio, como la dirección IP asociada con este y cómo gestionar solicitudes
+                            dirigidas a dicho dominio. Estos registros consisten en una serie de archivos de
+                            texto escritos en lo que se conoce como sintaxis DNS. La sintaxis DNS es
+                            simplemente una cadena de caracteres utilizados como comandos que dicen al
+                            servidor DNS qué hacer. Todos los registros DNS tienen también un "TTL", que
+                            quiere decir "time-to-live" e indica con qué frecuencia el servidor DNS actualizará
+                            ese registro.</p>
+                            <img src="img/DNS4.png" alt="DNS" style="width: 30%;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="tipos" class="section">
+            <h2>TIPOS MÁS COMUNES DE REGISTROS DNS</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>Registro A: registro que contiene la dirección IP de un dominio.</p>
+                            
+                        <p>Registro AAAA: El registro que contiene la dirección IPv6 de un dominio (a diferencia
+                            de los registros A, que enumeran la dirección IPv4).</p>
+                           
+                        <p>Registro CNAME: reenvía un dominio o subdominio a otro dominio, NO proporciona
+                            una dirección IP.</p>
+                            
+                        <p>Registro MX: dirige el correo a un servidor de correo electrónico</p>
+                            
+                        <p>Registro TXT: Permite que un administrador pueda almacenar notas de texto en el
+                            registro. Estos registros se suelen utilizar para la seguridad del correo electrónico.</p>
+                            
+                        <p>Registro NS: almacena el servidor de nombres para una entrada DNS.</p>
+                            
+                        <p>Registro SOA: almacena la información del administrador sobre un dominio.</p>
+                            
+                        <p>Registro SRV: especifica un puerto para servicios específicos</p>
+                           
+                        <p>Registro PTR: proporciona un nombre de dominio en búsquedas inversas.</p>
+                        <img src="img/DNS5.png" alt="DNS" style="width: 30%;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="servidores" class="section">
+            <h2>SERVIDORES DNS IMPLICADOS</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>Recursor de DNS: es como un bibliotecario al que se le pide que busque un libro
+                            determinado en la biblioteca. El recursor DNS es un servidor diseñado para recibir
+                            consultas desde equipos cliente mediante aplicaciones como navegadores web.
+                            Normalmente, el recursor será el responsable de hacer solicitudes adicionales para
+                            satisfacer la consulta de DNS del cliente.</p>
+
+                        <p>Servidor de nombres raíz: es el primer paso para traducir (solucionar) los nombres
+                            de servidor legibles en direcciones IP. Se puede comparar a un índice en una
+                            biblioteca que apunta a diferentes estanterías de libros. Generalmente sirve como
+                            referencia de otras ubicaciones más específicas.</p>
+
+                        <p>Servidor de nombres TLD: el servidor de dominio de nivel superior (TLD) se puede
+                            comparar con una estantería de libros en una biblioteca. Es el paso siguiente en la
+                            búsqueda de una dirección IP específica y aloja la última parte de un nombre de
+                            servidor (en example.com, el servidor TLD es "com").</p>
+
+                        <p>Servidor de nombres autoritativo: se puede interpretar como un diccionario en una
+                            estantería de libros, en el que se puede consultar la definición de un nombre
+                            específico. El servidor de nombres autoritativo es la última parada en la consulta del
+                            servidor de nombres. Si cuenta con acceso al registro solicitado, devolverá la
+                            dirección IP del nombre del servidor solicitado al recursor de DNS (el bibliotecario)
+                            que hizo la solicitud inicial.</p>
+                            <img src="img/DNS6.png" alt="DNS" style="width: 30%;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="ataques" class="section">
+            <h2>ATAQUES DNS MÁS COMUNES</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>Suplantación de DNS/envenenamiento de caché: es un ataque en el que se
+                            introducen datos DNS falsificados en el caché del solucionador de DNS, lo cual
+                            provoca que el solucionador devuelva una dirección IP incorrecta para un dominio.
+                            En vez de ir al sitio web correcto, se puede desviar el tráfico a un equipo malicioso
+                            o a cualquier lugar que quiera el atacante, a menudo a una réplica del sitio original
+                            usada con fines maliciosos, tales como distribuir malware o recopilar información de
+                            inicio de sesión.</p>
+
+                        <p>Túnel de DNS: este ataque usa otros protocolos para transmitir consultas y
+                            respuestas DNS a través de un túnel. Los atacantes pueden utilizar
+                            SSH, TCP o HTTP para pasar malware o información robada a consultas DNS, sin
+                            que los detecten la mayoría de firewalls.</p>
+
+                        <p>Secuestro de DNS: en un secuestro de DNS, el atacante redirige las consultas a un
+                            servidor de nombres de dominio diferente. Se puede llevar a cabo con malware o
+                            con una modificación no autorizada de un servidor DNS. Aunque el resultado es
+                            similar al de la falsificación de DNS, es un ataque esencialmente diferente, ya que
+                            ataca el registro DNS del sitio web en el servidor de nombres, en vez de la caché
+                            de un solucionador.</p>
+
+                        <p>Ataque NXDOMAIN: es un tipo de ataque de inundación de DNS en el que un
+                            atacante inunda un servidor DNS con solicitudes de registros que no existen, para
+                            causar una denegación de servicio para el tráfico legítimo. Se puede conseguir con
+                            herramientas de ataque sofisticadas que pueden generar de forma automática
+                            subdominios únicos para cada solicitud. Los ataques de NXDOMAIN también
+                            pueden dirigirse contra un solucionador recursivo con el objetivo de llenar la caché
+                            del solucionador con solicitudes basura.</p>
+
+                        <p>Ataque de dominio fantasma: un ataque de dominio fantasma da un resultado similar
+                            al de un ataque NXDOMAIN en una resolución DNS. El atacante configura una serie
+                            de servidores de dominio "fantasmas" que o bien responden a las solicitudes muy
+                            despacio o no responden en absoluto. Después, el solucionador recibe una
+                            avalancha de solicitudes a estos dominios y se queda inmovilizado esperando
+                            respuestas, con la consecuencia de un rendimiento ralentizado y la denegación de
+                            servicio.</p>
+
+                        <p>Ataque de subdominio aleatorio: en este caso, el atacante envía consultas DNS a
+                            varios subdominios aleatorios e inexistentes de un sitio legítimo. Su objetivo es crear
+                            una denegación de servicio para el servidor de nombres autoritativo del dominio,
+                            haciendo que sea imposible buscar el sitio web desde el servidor de nombres. Como
+                            efecto colateral, el ISP del atacante también puede verse afectado, ya que la caché
+                            de su solucionador recursivo se cargará con solicitudes perjudiciales.
+                            Ataque de bloqueo de dominio: los atacantes orquestan esta forma de ataque
+                            configurando dominios especiales y solucionadores para crear conexiones TCP con
+                            otros solucionadores legítimos. Cuando los solucionadores atacados envían
+                            solicitudes, estos dominios devuelven flujos lentos de paquetes aleatorios, que
+                            inmovilizan los recursos del solucionador.</p>
+
+                        <p>Ataque CPE basado en red de robots (botnet): estos ataques se realizan usando
+                            dispositivos CPE (equipos locales del cliente, hardware otorgado por los
+                            proveedores de servicios para que lo usen sus clientes, como
+                            módems, enrutadores, cajas de cables, etc.). Los atacantes ponen en riesgo a los
+                            CPE y los dispositivos se convierten en parte de una red de robots (botnet), que se
+                            utiliza para llevar a cabo ataques de subdominio aleatorios contra un sitio o un
+                            dominio.</p>
+                            <img src="img/DNS7.png" alt="DNS" style="width: 20%;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <div class="piePagina">
+        <table></table>
+            <tr>
+                <td>
+        <p>&copy; Copyright 2024. Itzel Guadalupe Jiménez Gómez</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Mostrar la sección seleccionada
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
